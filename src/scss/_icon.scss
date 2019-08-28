@@ -1,0 +1,68 @@
+@import "vars";
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: $iconsColor;
+  display: inline-block;
+  margin-right: 10px;
+
+  &.icon__hamburger {
+    @extend %icon-params;
+    background-image: url("../img/icons/humburger.png");
+  }
+
+  &.icon__request {
+    @extend %icon-params;
+    background-image: url("../img/icons/instr.png");
+  }
+
+  &.icon__status {
+    @extend %icon-params;
+    background-image: url("../img/icons/search-cal.png");
+    margin: 0;
+  }
+
+  &.icon__phone {
+    @extend %icon-params;
+    background-image: url("../img/icons/phone.png");
+  }
+
+  &.icon__message {
+    @extend %icon-params;
+    background-image: url("../img/icons/chat.png");
+  }
+
+  &.icon__person {
+    @extend %icon-params;
+    background-image: url("../img/icons/person.png");
+  }
+
+  &.icon__search {
+    @extend %icon-params;
+    background-image: url("../img/icons/search.png");
+  }
+
+  &.icon__close {
+    @extend %icon-params;
+    background-image: url("../img/icons/close.png");
+  }
+
+  &.icon__greater {
+    @extend %icon-params;
+    background-image: url("../img/icons/greater.png");
+    border: 2px solid #FF3E79;
+  }
+
+  &.icon__no-bg {
+    background-color: transparent;
+    border: 2px solid #FF3E79;
+  }
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,48 @@
+@import "vars";
+
+header {
+  @extend %line-after;
+  background: #FFFFFF;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 15px;
+  height: 58px;
+
+  .header--logo {
+    img {
+      padding-left: 10px;
+    }
+  }
+
+  .header--contacts {
+    margin-left: auto;
+  }
+
+  .header--requests {
+    padding-left: 15px;
+
+    &::before {
+      content: "";
+      border-left: 2px solid #EAEAEA;
+      height: 32px;
+      margin-right: 0;
+      align-self: center;
+      padding-left: 20px;
+    }
+  }
+
+  @media (max-width: 491px) {
+    .header--contacts {
+      display: none;
+    }
+
+    .header--requests {
+      margin-left: auto;
+    }
+  }
+
+  @media (min-width: $desktopSize) {
+    display: none;
+  }
+}

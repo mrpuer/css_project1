@@ -1,0 +1,47 @@
+@import "vars";
+
+.more-info {
+  position: relative;
+  font-family: TT Lakes Medium, sans-serif;
+  font-size: 16px;
+  padding: 5px;
+  line-height: 21px;
+
+  &.more-info__expand {
+    padding-left: 30px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 10px;
+      color: $borderColor;
+      background: url("../img/icons/double-down.png") no-repeat 50% 50%;
+      height: 100%;
+      width: 8px;
+    }
+  }
+
+  &.more-info__link {
+    &::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      color: $iconsColor;
+      background: url("../img/icons/greater.png") no-repeat 50% 100%;
+      height: 100%;
+      width: 6px;
+      margin-left: 10px;
+    }
+  }
+
+  &.more-info__right {
+    text-align: right;
+    padding-right: 40px;
+
+    &::after {
+      right: 20px;
+    }
+  }
+}

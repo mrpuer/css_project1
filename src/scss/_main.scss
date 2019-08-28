@@ -1,0 +1,25 @@
+@import "title";
+@import "info";
+@import "swiper";
+@import "footer";
+@import "line";
+@import "sidebar";
+@import "vars";
+
+main {
+  padding: 1rem 0;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (max-width: $desktopSize) {
+    overflow: hidden;
+    flex-wrap: nowrap;
+  }
+
+  h1, h2, nav, .info {
+    padding-left: 1rem;
+  }
+}
+

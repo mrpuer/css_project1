@@ -1,0 +1,17 @@
+footer {
+  font-size: 14px;
+  color: #7E7E82;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    @extend %line-before;
+    width: 100%;
+    padding: 0 -16px;
+  }
+}

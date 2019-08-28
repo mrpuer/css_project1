@@ -1,0 +1,24 @@
+@import "post-image";
+@import "more-info";
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 1rem;
+  line-height: 20px;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  &.info__two-columns {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .info--hide {
+    display: none;
+  }
+}

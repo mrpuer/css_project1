@@ -1,0 +1,15 @@
+@import "vars";
+
+.button {
+  border-radius: 20px;
+  color: #FFFFFF;
+  font-size: 12px;
+  padding: 10px 40px 10px 10px;
+  font-family: "TT Lakes Bold", sans-serif;
+  text-transform: uppercase;
+  line-height: 10px;
+
+  &.button__order {
+    background: $iconsColor url("../img/icons/greater_w.png") no-repeat 90% 50%;
+  }
+}

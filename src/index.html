@@ -8,7 +8,346 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-<img src="./img/webpack.svg" alt="Webpack Logo" width="200px">
-<h3>Welcome to Webpack 4 starter </h3>
+<aside class="main-sidebar" id="main-sidebar">
+  <section class="main-sidebar--wrap">
+    <section class="main-sidebar__top">
+      <section class="logo">
+        <a href="#" class="icon icon__close" id="close-sidebar"></a>
+        <a href="#" class="logo-img"><img src="img/logo.png" width="98" alt="Company logo"></a>
+      </section>
+
+      <section class="main-sidebar__search">
+        <a href="#" class="icon icon__search"></a>
+        <!--      <input type="text" class="input input__collapsed">-->
+      </section>
+    </section>
+
+
+    <nav class="main-sidebar__nav">
+      <ul>
+        <li class="main-sidebar__nav--active item-marker">Ремонт техники</li>
+        <li>Услуги и сервисы</li>
+        <li>Корпоративным клиентам</li>
+        <li>Продавцам техники</li>
+        <li>Партнерам</li>
+        <li>Производителям</li>
+        <li>Наши сервисные центры</li>
+        <li>Контакты</li>
+      </ul>
+    </nav>
+
+    <section class="main-sidebar__contacts">
+      <section class="icon__container">
+        <a href="#" class="icon icon__phone"></a>
+        <a href="#" class="icon icon__message"></a>
+        <a href="#" class="icon icon__person"></a>
+      </section>
+      <div>mail@cps.com</div>
+      <h3>8 800 890 8900</h3>
+      <div>
+        <a href="#" class="main-sidebar__contacts--active">RU </a>
+        <a href="#">EN </a>
+        <a href="#">CH</a>
+      </div>
+    </section>
+  </section>
+</aside>
+
+<div class="page">
+  <header>
+    <section class="header--logo icon-container">
+      <a href="#" class="icon icon__hamburger" id="toggle-sidebar"></a>
+      <a href="#"><img src="img/logo.png" width="98" alt="Company logo"></a>
+    </section>
+    <section class="header--contacts icon-container">
+      <a href="#" class="icon icon__phone"></a>
+      <a href="#" class="icon icon__message"></a>
+      <a href="#" class="icon icon__person"></a>
+    </section>
+    <section class="header--requests icon-container">
+      <a href="#" class="icon icon__request"></a>
+      <a href="#" class="icon icon__status"></a>
+    </section>
+  </header>
+
+  <main>
+
+    <h1 class="item-marker">Услуги и сервисы</h1>
+
+    <nav class="swiper-container" id="swiper-nav">
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide swiper-slide--active"><a href="#">Ремонтируемые бренды</a></li>
+        <li class="swiper-slide"><a href="#">Ремонтируемые устройства</a></li>
+        <li class="swiper-slide"><a href="#">Цены на услуги</a></li>
+        <li class="swiper-slide"><a href="#">Адреса сервисных центров</a></li>
+        <li class="swiper-slide"><a href="#">Специальные цены</a></li>
+        <li class="swiper-slide"><a href="#">Отзывы</a></li>
+      </ul>
+    </nav>
+
+    <section class="info">
+      <article>
+        <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать
+          свой ноутбук Dell с официальной гарантией производителя.</p>
+        <p class="info--hide" id="intro-text">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
+          что
+          подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и,
+          в свою очередь, советуют нас родным и близким.</p>
+        <a href="#" class="more-info more-info__expand" id="intro-link">Читать далее</a>
+
+        <!--      <figure class="post-image full-size-container">-->
+        <!--        <img src="img/post.jpg" alt="Company logo on wall">-->
+        <!--      </figure>-->
+      </article>
+    </section>
+
+    <section>
+      <h2>Ремонт техники различных брендов</h2>
+
+      <div class="swiper-container" id="swiper-brand">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide swiper-slide--box swiper-slide--brand">
+            <img src="img/brands/lenovo.png" alt="Lenovo logo">
+            <span class="icon icon__greater icon__no-bg"></span>
+          </li>
+          <li class="swiper-slide swiper-slide--box swiper-slide--brand">
+            <img src="img/brands/sumsung.png" alt="sumsung logo">
+            <span class="icon icon__greater icon__no-bg"></span>
+          </li>
+          <li class="swiper-slide swiper-slide--box swiper-slide--brand">
+            <img src="img/brands/apple.png" alt="apple logo">
+            <span class="icon icon__greater icon__no-bg"></span>
+          </li>
+          <li class="swiper-slide swiper-slide--box swiper-slide--brand">
+            <img src="img/brands/bosch.png" alt="bosch logo">
+            <span class="icon icon__greater icon__no-bg"></span>
+          </li>
+          <li class="swiper-slide swiper-slide--box swiper-slide--brand">
+            <img src="img/brands/hp.png" alt="hp logo">
+            <span class="icon icon__greater icon__no-bg"></span>
+          </li>
+          <li class="swiper-slide swiper-slide--box swiper-slide--brand">
+            <img src="img/brands/acer.png" alt="acer logo">
+            <span class="icon icon__greater icon__no-bg"></span>
+          </li>
+          <li class="swiper-slide swiper-slide--box swiper-slide--brand">
+            <img src="img/brands/vs.png" alt="view sonic logo">
+            <span class="icon icon__greater icon__no-bg"></span>
+          </li>
+          <li class="swiper-slide swiper-slide--box swiper-slide--brand">
+            <img src="img/brands/sony.png" alt="sony logo">
+            <span class="icon icon__greater icon__no-bg"></span>
+          </li>
+        </ul>
+        <div class="swiper-pagination" id="pagination-brand"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ремонт различных видов техники</h2>
+
+      <div class="swiper-container" id="swiper-service">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide swiper-slide--box swiper-slide--service">
+            Ремонт ноутбуков
+            <span class="icon icon__greater icon__no-bg"></span>
+          </li>
+          <li class="swiper-slide swiper-slide--box swiper-slide--service">
+            Ремонт планшетов
+            <span class="icon icon__greater icon__no-bg"></span>
+          </li>
+          <li class="swiper-slide swiper-slide--box swiper-slide--service">
+            Ремонт ПК
+            <span class="icon icon__greater icon__no-bg"></span>
+          </li>
+          <li class="swiper-slide swiper-slide--box swiper-slide--service">
+            Ремонт мониторов
+            <span class="icon icon__greater icon__no-bg"></span>
+          </li>
+        </ul>
+        <div class="swiper-pagination" id="pagination-service"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Цены на услуги</h2>
+      <div class="swiper-container" id="swiper-price">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide swiper-slide--box swiper-slide--price">
+            <div>
+              <span>Ремонтные услуги</span><br>
+              Тестирование с выдачей технического заключения
+            </div>
+            <div>
+              <span>Цена</span><br>
+              Бесплатно
+            </div>
+            <div>
+              <span>Срок</span><br>
+              30-120 мин
+            </div>
+            <button type="button" class="button button__order">Заказать</button>
+          </li>
+          <li class="swiper-slide swiper-slide--box swiper-slide--price">
+            <div>
+              <span>Ремонтные услуги</span><br>
+              Замена дисплея
+            </div>
+            <div>
+              <span>Цена</span><br>
+              1 000 ₽
+            </div>
+            <div>
+              <span>Срок</span><br>
+              30-120 мин
+            </div>
+            <button type="button" class="button button__order">Заказать</button>
+          </li>
+          <li class="swiper-slide swiper-slide--box swiper-slide--price">
+            <div>
+              <span>Ремонтные услуги</span><br>
+              Замена полифонического динамика
+            </div>
+            <div>
+              <span>Цена</span><br>
+              1 000 ₽
+            </div>
+            <div>
+              <span>Срок</span><br>
+              30-120 мин
+            </div>
+            <button type="button" class="button button__order">Заказать</button>
+          </li>
+          <li class="swiper-slide swiper-slide--box swiper-slide--price">
+            <div>
+              <span>Ремонтные услуги</span><br>
+              Замена программного обеспечения
+            </div>
+            <div>
+              <span>Цена</span><br>
+              1 000 ₽
+            </div>
+            <div>
+              <span>Срок</span><br>
+              30 мин
+            </div>
+            <button type="button" class="button button__order">Заказать</button>
+          </li>
+          <li class="swiper-slide swiper-slide--box swiper-slide--price">
+            <div>
+              <span>Ремонтные услуги</span><br>
+              Диагностика
+            </div>
+            <div>
+              <span>Цена</span><br>
+              1 000 ₽
+            </div>
+            <div>
+              <span>Срок</span><br>
+              30 мин
+            </div>
+            <button type="button" class="button button__order">Заказать</button>
+          </li>
+        </ul>
+        <div class="swiper-pagination" id="pagination-price"></div>
+      </div>
+
+    </section>
+
+    <section class="info">
+      <article>
+        <p>Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого
+          предложения на постоянное обслуживание, оставьте заявку.</p>
+        <p class="more-info more-info__link">Получить коммерческое предложение</p>
+      </article>
+    </section>
+
+    <h2>Адреса сервисных центров</h2>
+    <p class="more-info more-info__link more-info__right">Наши партнеры</p>
+    <!--    <address class="full-size-container">-->
+    <!--      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afd862b3fdc268d98bd6321a1fdecbdea3f174a5de64729fc4e3040faf3164def&amp;width=100%25&amp;height=700&amp;lang=ru_RU&amp;scroll=true"></script>-->
+    <!--    </address>-->
+
+    <section class="info info__two-columns">
+      <p>Наши сервисные центры расположены по всей России, в таких городах, как Москва, Санкт-Петербург, Казань,
+        Нижний Новгород, владивосток, и др. Все сервисные центры являются авторизованными и имеют единую базу и
+        проходят ежемесячную проверку качества оказываемых услуг.</p>
+      <p>Наши сервисные центры расположены по всей России, в таких городах, как Москва, Санкт-Петербург, Казань,
+        Нижний Новгород, владивосток, и др. Все сервисные центры являются авторизованными и имеют единую базу и
+        проходят ежемесячную проверку качества оказываемых услуг.</p>
+      <p>Наши сервисные центры расположены по всей России, в таких городах, как Москва, Санкт-Петербург, Казань,
+        Нижний Новгород, владивосток, и др. Все сервисные центры являются авторизованными и имеют единую базу и
+        проходят ежемесячную проверку качества оказываемых услуг.</p>
+      <p>Наши сервисные центры расположены по всей России, в таких городах, как Москва, Санкт-Петербург, Казань,
+        Нижний Новгород, владивосток, и др. Все сервисные центры являются авторизованными и имеют единую базу и
+        проходят ежемесячную проверку качества оказываемых услуг.</p>
+    </section>
+
+    <footer>
+      <p>
+        © 2019 CPS<br>
+        Разработано командой Apesong
+      </p>
+      <p>
+        Политика конфиденциальности
+      </p>
+      <p>
+        Информация, размещенная на данной странице, не является публичной офертой
+      </p>
+    </footer>
+  </main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+<script>
+    let swiper = new Swiper('#swiper-nav', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        pagination: {
+            clickable: true,
+        },
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+    });
+    let swiper2 = new Swiper('#swiper-brand', {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        pagination: {
+            el: '#pagination-brand',
+            clickable: true,
+        },
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+    });
+
+    let swiper3 = new Swiper('#swiper-service', {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        pagination: {
+            el: '#pagination-service',
+            clickable: true,
+        },
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+    });
+
+    let swiper4 = new Swiper('#swiper-price', {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        pagination: {
+            el: '#pagination-price',
+            clickable: true,
+        },
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+    });
+</script>
 </body>
 </html>
