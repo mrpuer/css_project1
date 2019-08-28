@@ -34,3 +34,21 @@ mainArea.addEventListener('click', () => {
     closeSidebar();
   }
 });
+
+
+// set the more brands expand
+let expandBrandLink = mainBlock.querySelector('#more-brands');
+let brandsArea = mainBlock.querySelector('#swiper-brand');
+let brandCount = brandsArea.querySelectorAll('.swiper-slide').length;
+mainBlock.querySelector('#brands-count').innerHTML = `Показать все(${String(brandCount)})`;
+expandBrandLink.addEventListener('click', () => {
+  if (brandsArea.classList.contains('swiper-container--mob--expand')) {
+    mainBlock.querySelector('#brands-count').innerHTML = `Показать все(${String(brandCount)})`;
+    brandsArea.classList.remove('swiper-container--mob--expand');
+    expandBrandLink.classList.remove('more-info__hide');
+  } else {
+    mainBlock.querySelector('#brands-count').innerHTML = `Свернуть`;
+    expandBrandLink.classList.add('more-info__hide');
+    brandsArea.classList.add('swiper-container--mob--expand');
+  }
+});

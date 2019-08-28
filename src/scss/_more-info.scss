@@ -1,16 +1,18 @@
 @import "vars";
 
 .more-info {
+  display: inline-block;
   position: relative;
   font-family: TT Lakes Medium, sans-serif;
   font-size: 16px;
   padding: 5px;
   line-height: 21px;
 
-  &.more-info__expand {
+  &__expand {
     padding-left: 30px;
 
     &::before {
+      transition-duration: .5s;
       content: "";
       display: block;
       position: absolute;
@@ -23,7 +25,13 @@
     }
   }
 
-  &.more-info__link {
+  &__hide {
+    &::before {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__link {
     &::after {
       content: "";
       position: absolute;
@@ -36,7 +44,7 @@
     }
   }
 
-  &.more-info__right {
+  &__right {
     text-align: right;
     padding-right: 40px;
 
