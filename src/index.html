@@ -74,7 +74,7 @@
 
     <h1 class="item-marker">Услуги и сервисы</h1>
 
-    <nav class="swiper-container swiper-container--full" id="swiper-nav">
+    <nav class="swiper-container swiper-container--nav" id="swiper-nav">
       <ul class="swiper-wrapper">
         <li class="swiper-slide swiper-slide--active"><a href="#">Ремонтируемые бренды</a></li>
         <li class="swiper-slide"><a href="#">Ремонтируемые устройства</a></li>
@@ -104,7 +104,7 @@
     <section>
       <h2>Ремонт техники различных брендов</h2>
 
-      <div class="swiper-container swiper-container--mob" id="swiper-brand">
+      <div class="swiper-container swiper-container--mob swiper-container--brand" id="swiper-brand">
         <ul class="swiper-wrapper">
           <li class="swiper-slide swiper-slide--box swiper-slide--brand">
             <img src="img/brands/lenovo.png" alt="Lenovo logo">
@@ -141,13 +141,14 @@
         </ul>
         <div class="swiper-pagination" id="pagination-brand"></div>
       </div>
-      <a href="#" class="more-info more-info__expand" id="more-brands"><span id="brands-count"></span></a>
+      <a href="#" class="more-info more-info__expand more-info__expand--slides" id="more-brand"><span
+        id="brand-count"></span></a>
     </section>
 
     <section>
       <h2>Ремонт различных видов техники</h2>
 
-      <div class="swiper-container swiper-container--mob" id="swiper-service">
+      <div class="swiper-container swiper-container--mob swiper-container--service" id="swiper-service">
         <ul class="swiper-wrapper">
           <li class="swiper-slide swiper-slide--box swiper-slide--service">
             Ремонт ноутбуков
@@ -168,11 +169,13 @@
         </ul>
         <div class="swiper-pagination" id="pagination-service"></div>
       </div>
+      <a href="#" class="more-info more-info__expand more-info__expand--slides" id="more-service"><span
+        id="service-count"></span></a>
     </section>
 
     <section>
       <h2>Цены на услуги</h2>
-      <div class="swiper-container swiper-container--mob" id="swiper-price">
+      <div class="swiper-container swiper-container--mob swiper-container--price" id="swiper-price">
         <ul class="swiper-wrapper">
           <li class="swiper-slide swiper-slide--box swiper-slide--price">
             <div>
@@ -184,10 +187,12 @@
               Бесплатно
             </div>
             <div>
-              <span>Срок</span><br>
-              30-120 мин
+              <div>
+                <span>Срок</span><br>
+                30-120 мин
+              </div>
+              <button type="button" class="button button__order">Заказать</button>
             </div>
-            <button type="button" class="button button__order">Заказать</button>
           </li>
           <li class="swiper-slide swiper-slide--box swiper-slide--price">
             <div>
@@ -199,10 +204,12 @@
               1 000 ₽
             </div>
             <div>
-              <span>Срок</span><br>
-              30-120 мин
+              <div>
+                <span>Срок</span><br>
+                30-120 мин
+              </div>
+              <button type="button" class="button button__order">Заказать</button>
             </div>
-            <button type="button" class="button button__order">Заказать</button>
           </li>
           <li class="swiper-slide swiper-slide--box swiper-slide--price">
             <div>
@@ -214,10 +221,12 @@
               1 000 ₽
             </div>
             <div>
-              <span>Срок</span><br>
-              30-120 мин
+              <div>
+                <span>Срок</span><br>
+                30-120 мин
+              </div>
+              <button type="button" class="button button__order">Заказать</button>
             </div>
-            <button type="button" class="button button__order">Заказать</button>
           </li>
           <li class="swiper-slide swiper-slide--box swiper-slide--price">
             <div>
@@ -229,10 +238,12 @@
               1 000 ₽
             </div>
             <div>
-              <span>Срок</span><br>
-              30 мин
+              <div>
+                <span>Срок</span><br>
+                30 мин
+              </div>
+              <button type="button" class="button button__order">Заказать</button>
             </div>
-            <button type="button" class="button button__order">Заказать</button>
           </li>
           <li class="swiper-slide swiper-slide--box swiper-slide--price">
             <div>
@@ -244,10 +255,12 @@
               1 000 ₽
             </div>
             <div>
-              <span>Срок</span><br>
-              30 мин
+              <div>
+                <span>Срок</span><br>
+                30 мин
+              </div>
+              <button type="button" class="button button__order">Заказать</button>
             </div>
-            <button type="button" class="button button__order">Заказать</button>
           </li>
         </ul>
         <div class="swiper-pagination" id="pagination-price"></div>
