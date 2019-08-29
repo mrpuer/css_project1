@@ -80,21 +80,38 @@
       .swiper-wrapper {
         flex-wrap: wrap;
         flex-direction: column;
+        padding: 10px;
 
         .swiper-slide--price {
-
+          flex-wrap: nowrap;
           max-width: 100%;
           flex-direction: row;
           align-items: center;
-          padding-bottom: 20px;
+          justify-content: space-between;
           margin-bottom: 0;
           border: none;
           border-bottom: 1px solid #EAEAEA;
           border-radius: 0px;
-          height: 24px;
+          height: 33px;
+          overflow: hidden;
 
-          div span {
+          div span:first-child {
             display: none;
+          }
+
+          div:first-child {
+            flex-grow: 2;
+          }
+
+          div:nth-child(2) {
+            min-width: 75px;
+          }
+
+          div:nth-child(3) {
+            width: auto;
+            min-width: 220px;
+            margin-left: 5px;
+
           }
         }
       }
@@ -154,24 +171,28 @@
       flex-direction: column;
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: stretch;
       text-align: left;
       min-width: 232px;
       height: 178px;
       font-size: 14px;
 
-      span {
-        color: #7E7E82;;
-      }
-
-      .button {
-        margin-left: auto;
-      }
-
-      div:nth-child(3) {
-        width: 100%;
+      div {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+
+        &:nth-child(3) {
+          flex-direction: row;
+          align-items: center;
+
+          button {
+            margin-left: auto;
+          }
+        }
+
+        span:first-child {
+          color: #7E7E82;;
+        }
       }
     }
   }
