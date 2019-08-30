@@ -14,24 +14,27 @@
   padding: 15px 15px;
   min-width: 280px;
   transition: all .5s;
-
+  justify-content: flex-start;
 
   &--main {
     left: -450px;
     font-size: 16px;
     font-family: "TT Lakes Medium", sans-serif;
-    width: 100%;
-    max-width: 330px;
+    //width: 330px;
     min-height: 680px;
     min-width: 290px;
 
+    width: 100%;
+    max-width: 330px;
+
     &.sidebar--show {
       left: 0;
-      box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+      box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
     }
 
     &__nav {
       line-height: 24px;
+      flex-grow: 2;
 
       ul {
         display: flex;
@@ -49,7 +52,8 @@
     }
 
     &__contacts {
-      margin-top: auto;
+      //margin-top: auto;
+      flex-grow: 5;
       padding-left: 10px;
       padding-bottom: 40px;
 
@@ -83,6 +87,7 @@
       box-shadow: none;
       border-right: 1px solid $borderColor;
       height: auto;
+      width: 290px;
 
       &__top {
         justify-content: flex-start;
@@ -126,7 +131,7 @@
 
     &.sidebar--show {
       right: 0;
-      box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+      box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
     }
   }
 
