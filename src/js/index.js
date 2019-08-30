@@ -4,41 +4,71 @@ console.log('Works!');
 
 let mainBlock = document.querySelector('.page');
 let mainArea = mainBlock.querySelector('main')
-let sidebarMain = document.querySelector("#main-sidebar");
-let toggleSidebarButton = document.querySelector("#toggle-sidebar");
-let closeSidebarButton = sidebarMain.querySelector('#close-sidebar');
+// let sidebarMain = document.querySelector("#sidebar-main");
+// let toggleSidebarButton = document.querySelector("#toggle-sidebar");
+// let closeSidebarButton = sidebarMain.querySelector('#close-sidebar');
+//
+// let expandIntroTextLink = mainBlock.querySelector('#open-intro');
+// expandIntroTextLink.addEventListener('click', () => {
+//   let expandedText = mainBlock.querySelector('#intro-text');
+//   expandedText.classList.remove('info--hide');
+//   expandIntroTextLink.classList.add('info--hide');
+// });
+//
+// let closeSidebar = () => {
+//   sidebarMain.classList.remove('sidebar--show');
+//   mainBlock.classList.remove('page--inactive');
+// }
+//
+// toggleSidebarButton.addEventListener('click', () => {
+//   sidebarMain.classList.add('sidebar--show');
+//   mainBlock.classList.add('page--inactive');
+// });
+//
+// closeSidebarButton.addEventListener('click', () => {
+//   closeSidebar();
+// });
+//
+// mainArea.addEventListener('click', () => {
+//   if (sidebarMain.classList.contains('sidebar--show')) {
+//     closeSidebar();
+//   }
+// });
 
-let expandIntroTextLink = mainBlock.querySelector('#intro-link');
-expandIntroTextLink.addEventListener('click', () => {
-  let expandedText = mainBlock.querySelector('#intro-text');
-  expandedText.classList.remove('info--hide');
-  expandIntroTextLink.classList.add('info--hide');
-});
-
-let closeSidebar = () => {
-  sidebarMain.classList.remove('main-sidebar--show');
+let closeSidebar = (element) => {
+  element.classList.remove(`sidebar--show`);
   mainBlock.classList.remove('page--inactive');
 }
 
-toggleSidebarButton.addEventListener('click', () => {
-  sidebarMain.classList.add('main-sidebar--show');
+let openSidebar = (element) => {
+  element.classList.add(`sidebar--show`);
   mainBlock.classList.add('page--inactive');
-});
+}
 
-closeSidebarButton.addEventListener('click', () => {
-  closeSidebar();
-});
-
-mainArea.addEventListener('click', () => {
-  if (sidebarMain.classList.contains('main-sidebar--show')) {
-    closeSidebar();
-  }
-});
-
+let sidebarCollapse = (openElement, sidebarBlock, closeElement) => {
+  let showElement = document.querySelector(openElement);
+  let collapsedBlock = document.querySelector(sidebarBlock);
+  showElement.addEventListener('click', () => {
+    if (collapsedBlock.classList.contains(`sidebar--show`)) {
+      closeSidebar(collapsedBlock);
+    } else {
+      openSidebar(collapsedBlock);
+    }
+  });
+  let blockCloseElement = collapsedBlock.querySelector(closeElement)
+  blockCloseElement.addEventListener('click', () => {
+    closeSidebar(collapsedBlock);
+  });
+  mainArea.addEventListener('click', () => {
+    if (collapsedBlock.classList.contains(`sidebar--show`)) {
+      closeSidebar(collapsedBlock);
+    }
+  })
+};
 
 // blocks hide
-let blockCollapse = (key) => {
-  let expandBrandLink = mainBlock.querySelector(`#more-${key}`);
+let swiperCollapse = (key) => {
+  let expandBrandLink = mainBlock.querySelector(`#open-${key}`);
   let brandsArea = mainBlock.querySelector(`#swiper-${key}`);
   let brandCount = brandsArea.querySelectorAll('.swiper-slide').length;
   mainBlock.querySelector(`#${key}-count`).innerHTML = `Показать все(${String(brandCount)})`;
@@ -54,5 +84,11 @@ let blockCollapse = (key) => {
     }
   });
 };
-blockCollapse('brand');
-blockCollapse('service');
+swiperCollapse('brand');
+swiperCollapse('service');
+sidebarCollapse('#open-main', '#sidebar-main', '#main-close');
+sidebarCollapse('#open-phone-header', '#sidebar-phone', '#phone-close');
+sidebarCollapse('#open-phone', '#sidebar-phone', '#phone-close');
+sidebarCollapse('#open-feedback-header', '#sidebar-feedback', '#feedback-close');
+sidebarCollapse('#open-feedback', '#sidebar-feedback', '#feedback-close');
+

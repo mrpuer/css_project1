@@ -2,26 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-</head>
+    <title>Webpack 4 Starter</title>
+<link href="style.css" rel="stylesheet"></head>
 <body>
 <aside class="sidebar sidebar--main" id="sidebar-main">
-  <section class="sidebar--main__top">
-    <section class="sidebar--main__top--logo">
-      <a href="#" class="icon icon__close" id="main-close"></a>
+    <section class="sidebar--main__top">
+      <section class="sidebar--main__top--logo">
+        <a href="#" class="icon icon__close" id="main-close"></a>
         <a href="#" class="logo-img"><img src="img/logo.png" width="98" alt="Company logo"></a>
       </section>
 
-    <section class="sidebar--main__search">
+      <section class="sidebar--main__search">
         <a href="#" class="icon icon__search"></a>
-        <!--      <input type="text" class="input input__collapsed">-->
+        
       </section>
     </section>
 
-  <nav class="sidebar--main__nav">
+    <nav class="sidebar--main__nav">
       <ul>
         <li class="sidebar--main__nav--active item-marker">Ремонт техники</li>
         <li>Услуги и сервисы</li>
@@ -34,7 +33,7 @@
       </ul>
     </nav>
 
-  <section class="sidebar--main__contacts">
+    <section class="sidebar--main__contacts">
       <section class="icon__container">
         <a href="#" class="icon icon__phone" id="open-phone"></a>
         <a href="#" class="icon icon__message" id="open-feedback"></a>
@@ -92,9 +91,9 @@
           в свою очередь, советуют нас родным и близким.</p>
         <a href="#" class="more-info more-info__expand" id="open-intro">Читать далее</a>
 
-        <!--      <figure class="post-image full-size-container">-->
-        <!--        <img src="img/post.jpg" alt="Company logo on wall">-->
-        <!--      </figure>-->
+        
+        
+        
       </article>
     </section>
 
@@ -138,8 +137,7 @@
         </ul>
         <div class="swiper-pagination" id="pagination-brand"></div>
       </div>
-      <a href="#" class="more-info more-info__expand more-info__expand--slides" id="open-brand"><span
-        id="brand-count"></span></a>
+      <a href="#" class="more-info more-info__expand more-info__expand--slides" id="open-brand"><span id="brand-count"></span></a>
     </section>
 
     <section>
@@ -166,8 +164,7 @@
         </ul>
         <div class="swiper-pagination" id="pagination-service"></div>
       </div>
-      <a href="#" class="more-info more-info__expand more-info__expand--slides" id="open-service"><span
-        id="service-count"></span></a>
+      <a href="#" class="more-info more-info__expand more-info__expand--slides" id="open-service"><span id="service-count"></span></a>
     </section>
 
     <section>
@@ -275,9 +272,9 @@
 
     <h2>Адреса сервисных центров</h2>
     <p class="more-info more-info__link more-info__right">Наши партнеры</p>
-    <!--    <address class="full-size-container">-->
-    <!--      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afd862b3fdc268d98bd6321a1fdecbdea3f174a5de64729fc4e3040faf3164def&amp;width=100%25&amp;height=700&amp;lang=ru_RU&amp;scroll=true"></script>-->
-    <!--    </address>-->
+    
+    
+    
 
     <section class="info info__two-columns">
       <p>Наши сервисные центры расположены по всей России, в таких городах, как Москва, Санкт-Петербург, Казань,
@@ -310,10 +307,10 @@
 </div>
 
 <aside class="sidebar sidebar--modal" id="sidebar-phone">
-  <a href="#" class="icon icon__close sidebar--modal__close" id="phone-close"></a>
-  <h3 class="sidebar--modal__title item-marker">Заказать звонок</h3>
-  <input type="text">
-  <button class="button button__order">Отправить</button>
+    <a href="#" class="icon icon__close sidebar--modal__close" id="phone-close"></a>
+    <h3 class="sidebar--modal__title item-marker">Заказать звонок</h3>
+    <input type="text">
+    <button class="button button__order">Отправить</button>
 </aside>
 <aside class="sidebar sidebar--modal" id="sidebar-feedback">
   <a href="#" class="icon icon__close sidebar--modal__close" id="feedback-close"></a>
@@ -373,5 +370,5 @@
         },
     });
 </script>
-</body>
+<script type="text/javascript" src="./js/bundle.js"></script></body>
 </html>
