@@ -10,54 +10,58 @@
 
   &.icon__hamburger {
     @extend %icon-params;
-    background-image: url("../img/icons/humburger.png");
+    background-image: url("../img/icons/humburger.svg");
   }
 
   &.icon__request {
     @extend %icon-params;
-    background-image: url("../img/icons/instr.png");
+    background-image: url("../img/icons/instr.svg");
   }
 
   &.icon__status {
     @extend %icon-params;
-    background-image: url("../img/icons/search-cal.png");
+    background-image: url("../img/icons/search-cal.svg");
     margin: 0;
   }
 
   &.icon__phone {
     @extend %icon-params;
-    background-image: url("../img/icons/phone.png");
+    background-image: url("../img/icons/phone.svg");
   }
 
   &.icon__message {
     @extend %icon-params;
-    background-image: url("../img/icons/chat.png");
+    background-image: url("../img/icons/chat.svg");
   }
 
   &.icon__person {
     @extend %icon-params;
-    background-image: url("../img/icons/person.png");
+    background-image: url("../img/icons/person.svg");
   }
 
   &.icon__search {
     @extend %icon-params;
-    background-image: url("../img/icons/search.png");
+    background-image: url("../img/icons/search.svg");
   }
 
   &.icon__close {
     @extend %icon-params;
-    background-image: url("../img/icons/close.png");
+    background-image: url("../img/icons/close.svg");
   }
 
   &.icon__greater {
     @extend %icon-params;
-    background-image: url("../img/icons/greater.png");
+    background-image: url("../img/icons/greater.svg");
     border: 2px solid #FF3E79;
   }
 
   &.icon__no-bg {
     background-color: transparent;
     border: 2px solid #FF3E79;
+
+    &:hover {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
   }
 }
 

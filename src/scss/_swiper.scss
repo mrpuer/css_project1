@@ -21,6 +21,11 @@
     }
   }
 
+  &--nav {
+    a {
+      color: #7E7E82;
+    }
+  }
 
   @media (min-width: $desktopSize) {
     &--nav {

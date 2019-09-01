@@ -1,0 +1,65 @@
+@import "vars";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 2rem 1rem 1rem;
+
+  &__input {
+    border: 1px solid #EAEAEA;
+    width: 100%;
+    height: 26px;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+
+    &::placeholder {
+      color: $lighterText;
+    }
+
+    &.input__collapsed {
+      border-radius: 50px;
+    }
+
+    &--textarea {
+      height: auto;
+    }
+
+  }
+
+  &__submit-button {
+    margin-left: auto;
+    padding-left: 20px;
+    padding-right: 50px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 25px;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: -33px;
+      top: -5px;
+    }
+  }
+
+  @media (max-width: $mobileSize) {
+    padding-left: 0;
+    padding-right: 1rem;
+    &__input {
+      margin-bottom: 5px;
+    }
+
+    &__title {
+      margin-bottom: 15px;
+
+      &::before {
+        left: -18px;
+      }
+    }
+  }
+}

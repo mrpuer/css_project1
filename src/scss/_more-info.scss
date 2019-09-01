@@ -10,6 +10,7 @@
 
   &__expand {
     padding-left: 30px;
+    cursor: pointer;
 
     &::before {
       transition-duration: .5s;
@@ -19,7 +20,7 @@
       top: 0;
       left: 10px;
       color: $borderColor;
-      background: url("../img/icons/double-down.png") no-repeat 50% 50%;
+      background: url("../img/icons/double-down.svg") no-repeat 50% 50%;
       height: 100%;
       width: 8px;
     }
@@ -38,12 +39,15 @@
   }
 
   &__link {
+    a {
+      color: #1B1C21;
+    }
     &::after {
       content: "";
       position: absolute;
       top: -10px;
       color: $iconsColor;
-      background: url("../img/icons/greater.png") no-repeat 50% 100%;
+      background: url("../img/icons/greater.svg") no-repeat 50% 100%;
       height: 100%;
       width: 6px;
       margin-left: 10px;

@@ -51,8 +51,14 @@ body {
 
   a {
     text-decoration: none;
-    color: inherit;
+    color: $iconsColor;
+
+    &:hover {
+      color: #FF3E79;
+    }
   }
+
+
 
   .page {
     position: relative;
@@ -61,6 +67,9 @@ body {
 
   .page--inactive {
     opacity: 0.04;
+    @media (max-width: $mobileSize) {
+      display: none;
+    }
   }
 
   @media (min-width: $desktopSize) {

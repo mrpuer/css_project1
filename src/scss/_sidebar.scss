@@ -1,7 +1,7 @@
 @import "vars";
 @import "item-marker";
 @import "icon";
-@import "inputs";
+@import "form";
 
 .sidebar {
   display: flex;
@@ -23,19 +23,31 @@
     //width: 330px;
     min-height: 680px;
     min-width: 290px;
-
     width: 100%;
     max-width: 330px;
+    overflow: visible;
+    display: none;
+
+    &__phone {
+      font-size: 24px;
+      font-family: "TT Lakes Bold", sans-serif;
+      padding-top: 15px;
+      padding-bottom: 40px;
+    }
 
     &.sidebar--show {
+      display: flex;
       left: 0;
       box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
     }
 
     &__nav {
       line-height: 24px;
-      flex-grow: 2;
+      flex-grow: 1;
 
+      a {
+        color: #1B1C21;
+      }
       ul {
         display: flex;
         flex-wrap: wrap;
@@ -43,10 +55,12 @@
       }
 
       &--active {
-        color: $lighterText;
+        a {
+          color: $lighterText;
+        }
 
         &::before {
-          left: -12px;
+          left: -17px;
         }
       }
     }
@@ -57,12 +71,16 @@
       padding-left: 10px;
       padding-bottom: 40px;
 
-      & div:nth-child(2) {
-        padding-top: 20px;
+      a {
+        &.sidebar--main__contacts--active {
+          color: $lighterText;
+        }
+
+        color: #1B1C21;
       }
 
-      &--active {
-        color: $lighterText;
+      & div:nth-child(2) {
+        padding-top: 20px;
       }
     }
 
@@ -83,11 +101,13 @@
     }
 
     @media (min-width: $desktopSize) {
+      display: flex;
       position: static;
       box-shadow: none;
       border-right: 1px solid $borderColor;
       height: auto;
       width: 290px;
+      padding-left: 30px;
 
       &__top {
         justify-content: flex-start;
@@ -97,7 +117,8 @@
       }
 
       .icon__search {
-        margin-left: 30px;
+        //margin-left: 30px;
+        display: inline;
       }
 
       &::before {
@@ -106,30 +127,36 @@
         position: absolute;
         left: 14px;
         top: -20px;
-        height: 105%;
+        height: 90%;
         border-left: 1px solid $borderColor;
       }
     }
   }
 
   &--modal {
-    right: -440px;
-    width: 290px;
+    right: -450px;
+    max-width: 330px;
+    min-height: 680px;
+    z-index: 3;
+    overflow: hidden;
+    position: absolute;
+    display: none;
+
     @media (min-width: $mobileSize) {
       width: 410px;
-      &__title {
-        margin-top: 0;
-      }
+      border-left: 1px solid $borderColor;
 
       &.sidebar--show {
         .sidebar--modal__close {
           position: absolute;
           left: -65px;
+          top: 40px;
         }
       }
     }
 
     &.sidebar--show {
+      display: flex;
       right: 0;
       box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
     }
