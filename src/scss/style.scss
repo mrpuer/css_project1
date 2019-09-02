@@ -68,7 +68,8 @@ body {
 
   .page--inactive {
     opacity: 0.04;
-
+    position: fixed;
+    overflow-y: hidden;
   }
 
   @media (min-width: $desktopSize) {
