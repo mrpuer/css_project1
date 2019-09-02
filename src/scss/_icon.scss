@@ -8,6 +8,11 @@
   display: inline-block;
   margin-right: 10px;
 
+  &:hover, &:focus {
+    box-shadow: 0 0 10px rgba(255, 58, 119, 0.5);
+    cursor: pointer;
+  }
+
   &.icon__hamburger {
     @extend %icon-params;
     background-image: url("../img/icons/humburger.svg");
@@ -58,10 +63,6 @@
   &.icon__no-bg {
     background-color: transparent;
     border: 2px solid #FF3E79;
-
-    &:hover {
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    }
   }
 }
 

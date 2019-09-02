@@ -39,6 +39,7 @@ body {
   font-size: 14px;
   background-color: #F8F8F8;
   color: #1B1C21;
+  overflow-x: hidden;
 
   ul {
     list-style: none;
@@ -53,7 +54,7 @@ body {
     text-decoration: none;
     color: $iconsColor;
 
-    &:hover {
+    &:hover, &:focus {
       color: #FF3E79;
     }
   }
@@ -67,9 +68,7 @@ body {
 
   .page--inactive {
     opacity: 0.04;
-    @media (max-width: $mobileSize) {
-      display: none;
-    }
+
   }
 
   @media (min-width: $desktopSize) {

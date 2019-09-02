@@ -9,6 +9,11 @@
   text-transform: uppercase;
   line-height: 10px;
 
+  &:hover, &:focus {
+    box-shadow: 0 0 10px rgba(255, 58, 119, 0.5);
+    cursor: pointer;
+  }
+
   &.button__order {
     background: $iconsColor url("../img/icons/greater_w.svg") no-repeat 85% 50%;
   }

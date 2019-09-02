@@ -26,7 +26,6 @@
     width: 100%;
     max-width: 330px;
     overflow: visible;
-    display: none;
 
     &__phone {
       font-size: 24px;
@@ -138,9 +137,7 @@
     max-width: 330px;
     min-height: 680px;
     z-index: 3;
-    overflow: hidden;
     position: absolute;
-    display: none;
 
     @media (min-width: $mobileSize) {
       width: 410px;
@@ -149,15 +146,14 @@
       &.sidebar--show {
         .sidebar--modal__close {
           position: absolute;
-          left: -65px;
-          top: 40px;
+          transform: translate(-65px, 40px);
         }
       }
     }
 
     &.sidebar--show {
       display: flex;
-      right: 0;
+      transform: translateX(-450px);
       box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
     }
   }

@@ -11,8 +11,8 @@
 <aside class="sidebar sidebar--main" id="sidebar-main">
   <div class="sidebar--main__top">
     <div class="sidebar--main__top--logo">
-      <a href="#" class="icon icon__close" id="main-close"></a>
-      <a href="#" class="logo-img"><img src="img/logo.svg" width="98" alt="Company logo"></a>
+      <button type="button" class="icon icon__close" id="main-close"></button>
+      <a class="logo-img"><img src="img/logo.svg" width="98" alt="Company logo"></a>
     </div>
 
     <div class="sidebar--main__search">
@@ -36,9 +36,9 @@
 
   <div class="sidebar--main__contacts">
     <div class="icon__container">
-        <a href="#" class="icon icon__phone" id="open-phone"></a>
-        <a href="#" class="icon icon__message" id="open-feedback"></a>
-        <a href="#" class="icon icon__person"></a>
+      <button type="button" class="icon icon__phone" id="open-phone"></button>
+      <button type="button" class="icon icon__message" id="open-feedback"></button>
+      <button type="button" class="icon icon__person"></button>
     </div>
     <div><a href="mailto:mail@cps.com">mail@cps.com</a></div>
     <div class="sidebar--main__phone">8 800 890 8900</div>
@@ -57,9 +57,9 @@
       <a href="#"><img src="img/logo.svg" width="98" alt="Company logo"></a>
     </div>
     <div class="header--contacts icon-container">
-      <a href="#" class="icon icon__phone" id="open-phone-header"></a>
-      <a href="#" class="icon icon__message" id="open-feedback-header"></a>
-      <a href="#" class="icon icon__person"></a>
+      <button type="button" class="icon icon__phone" id="open-phone-header"></button>
+      <button type="button" class="icon icon__message" id="open-feedback-header"></button>
+      <button type="button" class="icon icon__person"></button>
     </div>
     <div class="header--requests icon-container">
       <a href="#" class="icon icon__request"></a>
@@ -90,7 +90,7 @@
           что
           подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и,
           в свою очередь, советуют нас родным и близким.</p>
-        <div class="more-info more-info__expand" id="open-intro">Читать далее</div>
+        <button type="button" class="more-info more-info__expand" id="open-intro">Читать далее</button>
 
         <!--      <figure class="post-image full-size-container">-->
         <!--        <img src="img/post.jpg" alt="Company logo on wall">-->
@@ -138,8 +138,8 @@
         </ul>
         <div class="swiper-pagination" id="pagination-brand"></div>
       </div>
-      <div class="more-info more-info__expand more-info__expand--slides" id="open-brand"><span
-        id="brand-count"></span></div>
+      <button type="button" class="more-info more-info__expand more-info__expand--slides" id="open-brand"><span
+        id="brand-count"></span></button>
     </section>
 
     <section>
@@ -166,8 +166,8 @@
         </ul>
         <div class="swiper-pagination" id="pagination-service"></div>
       </div>
-      <div class="more-info more-info__expand more-info__expand--slides" id="open-service"><span
-        id="service-count"></span></div>
+      <button type="button" class="more-info more-info__expand more-info__expand--slides" id="open-service"><span
+        id="service-count"></span></button>
     </section>
 
     <section>
@@ -310,7 +310,7 @@
 </div>
 
 <aside class="sidebar sidebar--modal" id="sidebar-phone">
-  <a href="#" class="icon icon__close sidebar--modal__close" id="phone-close"></a>
+  <button type="button" class="icon icon__close sidebar--modal__close" id="phone-close"></button>
   <form class="form">
     <h3 class="form__title item-marker">Заказать звонок</h3>
     <input type="text" name="phone" id="request-call-phone" class="form__input" placeholder="Телефон">
@@ -321,7 +321,7 @@
 </aside>
 
 <aside class="sidebar sidebar--modal" id="sidebar-feedback">
-  <a href="#" class="icon icon__close sidebar--modal__close" id="feedback-close"></a>
+  <button type="button" class="icon icon__close sidebar--modal__close" id="feedback-close"></button>
   <form class="form">
     <h3 class="form__title item-marker">Обратная связь</h3>
     <input type="text" name="name" id="feedback-name" class="form__input" placeholder="Имя">
