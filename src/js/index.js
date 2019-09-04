@@ -1,4 +1,6 @@
 import '../scss/style.scss';
+import Swiper from 'swiper';
+
 
 console.log('Works!');
 
@@ -35,6 +37,8 @@ let mainArea = mainBlock.querySelector('main');
 //   }
 // });
 
+const sidebars = [];
+
 let readMoreButton = mainArea.querySelector('#open-full');
 readMoreButton.addEventListener('click', () => {
   let fullTextArea = mainArea.querySelector('#all-text');
@@ -52,11 +56,21 @@ let closeSidebar = (element) => {
 };
 
 let openSidebar = (element) => {
+  for (let sidebar in sidebars) {
+    console.log(sidebar);
+    let collapsedBlock = document.querySelector(sidebar);
+    collapsedBlock.classList.remove(`sidebar--show`);
+  }
   element.classList.add(`sidebar--show`);
-  mainBlock.classList.add('page--inactive');
+  if (!mainBlock.classList.contains('page--inactive')) {
+    mainBlock.classList.add('page--inactive');
+  }
 };
 
 let sidebarCollapse = (openElement, sidebarBlock, closeElement) => {
+  if (sidebars.indexOf(sidebarBlock) === -1) {
+    sidebars.push(sidebarBlock);
+  }
   let showElement = document.querySelector(openElement);
   let collapsedBlock = document.querySelector(sidebarBlock);
   showElement.addEventListener('click', () => {
@@ -95,7 +109,6 @@ let swiperCollapse = (key) => {
     }
   });
 };
-
 
 swiperCollapse('brand');
 swiperCollapse('service');
