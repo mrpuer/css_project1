@@ -5,3 +5,15 @@
   height: 1px;
   width: 100%;
 }
+
+.line--ver {
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 32px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #EAEAEA;
+  }
+}

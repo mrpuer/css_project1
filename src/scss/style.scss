@@ -68,8 +68,10 @@ body {
 
   .page--inactive {
     opacity: 0.04;
-    position: fixed;
-    overflow-y: hidden;
+    //mob only
+    @media (max-width: $mobileSize) {
+      position: fixed;
+    }
   }
 
   @media (min-width: $desktopSize) {

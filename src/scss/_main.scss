@@ -6,7 +6,7 @@
 @import "sidebar";
 @import "vars";
 
-main {
+.main {
   padding: 1rem 0;
   overflow: visible;
   display: flex;
@@ -20,6 +20,25 @@ main {
 
   h1, h2, nav, .info {
     padding-left: 1rem;
+  }
+
+  &__head {
+    display: flex;
+
+    .header--requests {
+      margin-left: auto;
+      font-size: 16px;
+      font-family: "TT Lakes Medium", sans-serif;
+      padding-right: 10px;
+
+      a {
+        margin: 0 10px;
+      }
+
+      @media (max-width: $desktopSize) {
+        display: none;
+      }
+    }
   }
 }
 

@@ -9,12 +9,12 @@
   position: fixed;
   background-color: #FFFFFF;
   top: 0;
-  height: 100%;
   z-index: 2;
   padding: 15px 15px;
   min-width: 280px;
   transition: all .5s;
   justify-content: flex-start;
+  height: 100vh;
 
   &--main {
     left: -450px;
@@ -35,7 +35,6 @@
     }
 
     &.sidebar--show {
-      display: flex;
       transform: translateX(450px);
       box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
     }
@@ -95,10 +94,12 @@
       }
     }
 
+    //mob and middle
     @media (max-width: $desktopSize) {
       position: absolute;
     }
 
+    //desktop only
     @media (min-width: $desktopSize) {
       display: flex;
       position: static;
@@ -115,7 +116,7 @@
       }
 
       .icon__search {
-        //margin-left: 30px;
+        margin-left: 30px;
         display: inline;
       }
 
@@ -129,20 +130,27 @@
         border-left: 1px solid $borderColor;
       }
     }
+
+    @media (max-width: $desktopSize) and (min-width: $mobileSize) {
+      position: fixed;
+    }
   }
 
   &--modal {
     right: -450px;
-    max-width: 330px;
+    width: 100%;
     min-height: 680px;
     z-index: 3;
     position: absolute;
+    max-width: 360px;
+    box-sizing: border-box;
 
     @media (min-width: $mobileSize) {
-      width: 410px;
+      max-width: 410px;
       border-left: 1px solid $borderColor;
 
       &.sidebar--show {
+        position: fixed;
         .sidebar--modal__close {
           position: absolute;
           transform: translate(-65px, 25px);

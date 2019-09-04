@@ -1,6 +1,6 @@
 @import "vars";
 
-header {
+.header {
   @extend %line-after;
   background: #FFFFFF;
   display: flex;
@@ -9,35 +9,32 @@ header {
   padding: 15px;
   height: 58px;
 
-  .header--logo {
+  &--logo {
     img {
       padding-left: 10px;
     }
+
+    @media (max-width: 491px) {
+      .line--ver {
+        display: none;
+      }
+    }
   }
 
-  .header--contacts {
+  &--contacts {
     margin-left: auto;
   }
 
-  .header--requests {
-    padding-left: 15px;
-
-    &::before {
-      content: "";
-      border-left: 2px solid #EAEAEA;
-      height: 32px;
-      margin-right: 0;
-      align-self: center;
-      padding-left: 20px;
-    }
+  &--requests {
+    margin-left: auto;
   }
 
   @media (max-width: 491px) {
-    .header--contacts {
+    &--contacts {
       display: none;
     }
 
-    .header--requests {
+    &--requests {
       margin-left: auto;
     }
   }

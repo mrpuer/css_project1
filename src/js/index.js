@@ -3,7 +3,7 @@ import '../scss/style.scss';
 console.log('Works!');
 
 let mainBlock = document.querySelector('.page');
-let mainArea = mainBlock.querySelector('main')
+let mainArea = mainBlock.querySelector('main');
 // let sidebarMain = document.querySelector("#sidebar-main");
 // let toggleSidebarButton = document.querySelector("#toggle-sidebar");
 // let closeSidebarButton = sidebarMain.querySelector('#close-sidebar');
@@ -35,15 +35,26 @@ let mainArea = mainBlock.querySelector('main')
 //   }
 // });
 
+let readMoreButton = mainArea.querySelector('#open-full');
+readMoreButton.addEventListener('click', () => {
+  let fullTextArea = mainArea.querySelector('#all-text');
+  if (fullTextArea.classList.contains('info__full--show')) {
+    fullTextArea.classList.remove('info__full--show');
+  } else {
+    fullTextArea.classList.add('info__full--show');
+  }
+
+});
+
 let closeSidebar = (element) => {
   element.classList.remove(`sidebar--show`);
   mainBlock.classList.remove('page--inactive');
-}
+};
 
 let openSidebar = (element) => {
   element.classList.add(`sidebar--show`);
   mainBlock.classList.add('page--inactive');
-}
+};
 
 let sidebarCollapse = (openElement, sidebarBlock, closeElement) => {
   let showElement = document.querySelector(openElement);
@@ -55,7 +66,7 @@ let sidebarCollapse = (openElement, sidebarBlock, closeElement) => {
       openSidebar(collapsedBlock);
     }
   });
-  let blockCloseElement = collapsedBlock.querySelector(closeElement)
+  let blockCloseElement = collapsedBlock.querySelector(closeElement);
   blockCloseElement.addEventListener('click', () => {
     closeSidebar(collapsedBlock);
   });
@@ -84,6 +95,8 @@ let swiperCollapse = (key) => {
     }
   });
 };
+
+
 swiperCollapse('brand');
 swiperCollapse('service');
 sidebarCollapse('#open-main', '#sidebar-main', '#main-close');
@@ -92,3 +105,52 @@ sidebarCollapse('#open-phone', '#sidebar-phone', '#phone-close');
 sidebarCollapse('#open-feedback-header', '#sidebar-feedback', '#feedback-close');
 sidebarCollapse('#open-feedback', '#sidebar-feedback', '#feedback-close');
 
+let swiper = new Swiper('#swiper-nav', {
+  slidesPerView: 'auto',
+  spaceBetween: 10,
+  pagination: {
+    clickable: true,
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+});
+let swiper2 = new Swiper('#swiper-brand', {
+  slidesPerView: 'auto',
+  spaceBetween: 15,
+  pagination: {
+    el: '#pagination-brand',
+    clickable: true,
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+});
+
+let swiper3 = new Swiper('#swiper-service', {
+  slidesPerView: 'auto',
+  spaceBetween: 15,
+  pagination: {
+    el: '#pagination-service',
+    clickable: true,
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+});
+
+let swiper4 = new Swiper('#swiper-price', {
+  slidesPerView: 'auto',
+  spaceBetween: 15,
+  pagination: {
+    el: '#pagination-price',
+    clickable: true,
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+});

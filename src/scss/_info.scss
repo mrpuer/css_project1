@@ -1,23 +1,91 @@
-@import "post-image";
+@import "vars";
 @import "more-info";
 
 .info {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   padding-right: 1rem;
+  flex-wrap: wrap;
 
   article {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    width: 100%;
+    max-width: 500px;
   }
 
-  &.info__two-columns {
-    padding-top: 10px;
+  figure {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  &__two-columns {
     padding-bottom: 10px;
   }
 
-  .info--hide {
+  &__full {
     display: none;
+
+    &--show {
+      display: block;
+    }
+  }
+
+  &__image {
+    max-width: 560px;
+    padding-left: 5px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (min-width: $mobileSize) {
+    &__two-columns {
+      div {
+        padding: 10px;
+      }
+    }
+  }
+
+  @media (min-width: 528px) {
+    flex-direction: row;
+
+    &__full {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      &--show {
+        overflow: visible;
+        white-space: normal;
+      }
+    }
+
+    figure {
+      margin: 0;
+
+      img {
+        border-radius: 5px;
+      }
+    }
+
+    article {
+      width: 48%;
+    }
+
+    &__image {
+      width: 48%;
+    }
+  }
+
+  @media (min-width: $desktopSize) {
+    &__full {
+      display: block;
+      overflow: visible;
+      white-space: normal;
+    }
   }
 }
