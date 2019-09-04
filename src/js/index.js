@@ -56,11 +56,10 @@ let closeSidebar = (element) => {
 };
 
 let openSidebar = (element) => {
-  for (let sidebar in sidebars) {
-    console.log(sidebar);
-    let collapsedBlock = document.querySelector(sidebar);
-    collapsedBlock.classList.remove(`sidebar--show`);
-  }
+  sidebars.forEach((el) => {
+    el.classList.remove(`sidebar--show`);
+  });
+
   element.classList.add(`sidebar--show`);
   if (!mainBlock.classList.contains('page--inactive')) {
     mainBlock.classList.add('page--inactive');
@@ -68,11 +67,12 @@ let openSidebar = (element) => {
 };
 
 let sidebarCollapse = (openElement, sidebarBlock, closeElement) => {
-  if (sidebars.indexOf(sidebarBlock) === -1) {
-    sidebars.push(sidebarBlock);
-  }
   let showElement = document.querySelector(openElement);
   let collapsedBlock = document.querySelector(sidebarBlock);
+
+  if (sidebars.indexOf(collapsedBlock) === -1) {
+    sidebars.push(collapsedBlock);
+  }
   showElement.addEventListener('click', () => {
     if (collapsedBlock.classList.contains(`sidebar--show`)) {
       closeSidebar(collapsedBlock);

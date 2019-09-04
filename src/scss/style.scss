@@ -59,6 +59,9 @@ body {
     }
   }
 
+  button {
+    border: none;
+  }
 
 
   .page {
@@ -68,6 +71,7 @@ body {
 
   .page--inactive {
     opacity: 0.04;
+    position: fixed;
     //mob only
     @media (max-width: $mobileSize) {
       position: fixed;
