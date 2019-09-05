@@ -1,4 +1,3 @@
-@import "title";
 @import "info";
 @import "swiper";
 @import "footer";
@@ -24,21 +23,24 @@
 
   &__head {
     display: flex;
+    flex-wrap: wrap;
+  }
 
-    .header--requests {
-      margin-left: auto;
-      font-size: 16px;
-      font-family: "TT Lakes Medium", sans-serif;
-      padding-right: 10px;
+  &__requests {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: auto;
+    padding-right: 10px;
 
-      a {
-        margin: 0 10px;
-      }
-
-      @media (max-width: $desktopSize) {
-        display: none;
-      }
+    @media (max-width: $desktopSize) {
+      display: none;
     }
+  }
+
+  &__head-link {
+    font-size: 16px;
+    font-family: "TT Lakes Medium", sans-serif;
   }
 }
 

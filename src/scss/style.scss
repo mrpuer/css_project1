@@ -41,6 +41,35 @@ body {
   color: #1B1C21;
   overflow-x: hidden;
 
+  h1 {
+    position: relative;
+    font-family: "TT Lakes Bold", sans-serif;
+    line-height: 24px;
+    padding: 5px;
+    margin-top: 0;
+  }
+
+  h2 {
+    @extend %line-before;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 16px;
+    color: $lighterText;
+    font-family: "TT Lakes Regular", sans-serif;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    line-height: 24px;
+
+    @media (min-width: $mobileSize) {
+      background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    }
+  }
+
+  h3 {
+    font-size: 24px;
+    font-family: "TT Lakes Bold", sans-serif;
+  }
+
   ul {
     list-style: none;
     padding: 0;
@@ -52,10 +81,10 @@ body {
 
   a {
     text-decoration: none;
-    color: $iconsColor;
+    color: $text;
 
     &:hover, &:focus {
-      color: #FF3E79;
+      color: $iconsColor;
     }
   }
 

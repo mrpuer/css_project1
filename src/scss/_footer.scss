@@ -1,6 +1,6 @@
 @import "vars";
 
-footer {
+.footer {
   @extend %line-before;
   font-size: 14px;
   color: #7E7E82;
@@ -14,14 +14,16 @@ footer {
   @media (min-width: $mobileSize) {
     flex-direction: row;
     flex-wrap: nowrap;
-    p {
+    &__item {
       width: 33.33%;
-    }
-    p:first-child {
-      text-align: left;
-    }
-    p:last-child {
-      text-align: right;
+
+      &--left {
+        text-align: left;
+      }
+
+      &--right {
+        text-align: right;
+      }
     }
   }
 }

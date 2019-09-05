@@ -1,20 +1,71 @@
 @import "vars";
 
 .button {
-  border-radius: 20px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   color: #FFFFFF;
-  font-size: 12px;
-  padding: 10px 40px 10px 10px;
-  font-family: "TT Lakes Bold", sans-serif;
-  text-transform: uppercase;
-  line-height: 10px;
+  background-color: $iconsColor;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 
   &:hover, &:focus {
     box-shadow: 0 0 10px rgba(255, 58, 119, 0.5);
     cursor: pointer;
   }
 
-  &.button__order {
+  &__wrapper > * {
+    margin-right: 10px;
+  }
+
+  &--order {
+    font-family: "TT Lakes Bold", sans-serif;
+    font-size: 12px;
+    width: auto;
+    height: auto;
+    text-transform: uppercase;
+    line-height: 10px;
+    padding: 10px 40px 10px 10px;
+    border-radius: 20px;
     background: $iconsColor url("../img/icons/greater_w.svg") no-repeat 85% 50%;
+  }
+
+  &--search {
+    background-image: url("../img/icons/search.svg");
+  }
+
+  &--phone {
+    background-image: url("../img/icons/phone.svg");
+  }
+
+  &--message {
+    background-image: url("../img/icons/chat.svg");
+  }
+
+  &--contact {
+    background-image: url("../img/icons/person.svg");
+  }
+
+  &--hamburger {
+    background-image: url("../img/icons/humburger.svg");
+  }
+
+  &--close {
+    background-image: url("../img/icons/close.svg");
+  }
+
+  &--request {
+    background-image: url("../img/icons/instr.svg");
+  }
+
+  &--status {
+    background-image: url("../img/icons/search-cal.svg");
+  }
+
+  &--greater {
+    background-image: url("../img/icons/greater.svg");
+    border: 2px solid #FF3E79;
+    background-color: transparent;
   }
 }

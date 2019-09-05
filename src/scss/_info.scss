@@ -7,16 +7,11 @@
   padding-right: 1rem;
   flex-wrap: wrap;
 
-  article {
+  &__content {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 500px;
-  }
-
-  figure {
-    margin-left: -16px;
-    margin-right: -16px;
   }
 
   &__two-columns {
@@ -31,14 +26,18 @@
     }
   }
 
-  &__image {
+  &__figure {
+    margin-left: -16px;
+    margin-right: -16px;
     max-width: 560px;
     padding-left: 5px;
+    width: 100%;
+    height: auto;
+  }
 
-    img {
-      width: 100%;
-      height: auto;
-    }
+  &__image {
+    width: 100%;
+    height: auto;
   }
 
   @media (min-width: $mobileSize) {
@@ -64,20 +63,17 @@
       }
     }
 
-    figure {
-      margin: 0;
-
-      img {
-        border-radius: 5px;
-      }
+    &__content {
+      width: 48%;
     }
 
-    article {
+    &__figure {
       width: 48%;
+      margin: 0;
     }
 
     &__image {
-      width: 48%;
+      border-radius: 5px;
     }
   }
 

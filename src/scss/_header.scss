@@ -10,9 +10,8 @@
   height: 58px;
 
   &--logo {
-    img {
-      padding-left: 10px;
-    }
+    display: flex;
+    align-items: center;
 
     @media (max-width: 491px) {
       .line--ver {
@@ -25,9 +24,6 @@
     margin-left: auto;
   }
 
-  &--requests {
-    margin-left: auto;
-  }
 
   @media (max-width: 491px) {
     &--contacts {

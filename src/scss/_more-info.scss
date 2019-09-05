@@ -43,9 +43,6 @@
   }
 
   &__link {
-    a {
-      color: #1B1C21;
-    }
     &::after {
       content: "";
       position: absolute;
