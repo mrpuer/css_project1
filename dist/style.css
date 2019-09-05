@@ -1568,12 +1568,13 @@ h2, footer {
     @media (min-width: 362px) {
       .sidebar--modal {
         max-width: 410px;
-        border-left: 1px solid rgba(65, 246, 215, 0.5); }
-        .sidebar--modal.sidebar--show {
-          position: fixed; }
-          .sidebar--modal.sidebar--show .sidebar--modal__close {
-            position: absolute;
-            transform: translate(-65px, 25px); } }
+        border-left: 1px solid rgba(65, 246, 215, 0.5); } }
+    @media (min-width: 460px) {
+      .sidebar--modal.sidebar--show {
+        position: fixed; }
+        .sidebar--modal.sidebar--show .sidebar--modal__close {
+          position: absolute;
+          transform: translate(-65px, 25px); } }
     .sidebar--modal.sidebar--show {
       display: flex;
       transform: translateX(-450px);
@@ -1662,13 +1663,16 @@ body {
     color: #FF3E79; }
     body a:hover, body a:focus {
       color: #FF3E79; }
+  body button {
+    border: none; }
   body .page {
     position: relative;
     -webkit-transition: opacity .5s;
     -o-transition: opacity .5s;
     transition: opacity .5s; }
   body .page--inactive {
-    opacity: 0.04; }
+    opacity: 0.04;
+    position: fixed; }
     @media (max-width: 362px) {
       body .page--inactive {
         position: fixed; } }
